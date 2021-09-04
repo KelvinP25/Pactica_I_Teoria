@@ -211,7 +211,7 @@ namespace Practica_1
         public static void ConvertirDollarEuro()
         {
             float dollar = 0;
-            float euros = 0, dinero = 0;
+            float euros = 0, cantEuro = 0.00f, cantDollar=0.00f;
             int Op = 0;
 
             Console.WriteLine("Elija una opccion a la cual desea cambiar: ");
@@ -223,13 +223,15 @@ namespace Practica_1
             if (Op == 1)
             {
                 Console.WriteLine("Ingrese la cantidad de euros que desea cambiar");
-                dinero = Convert.ToSingle(Console.ReadLine());
-                dollar = dinero * 1.19f;
+                cantEuro = Convert.ToSingle(Console.ReadLine());
+                dollar = cantEuro * 1.19f;
                 Console.WriteLine($"La cantidad de dinero en dollar es: {dollar}");
             }
             if (Op == 2)
             {
-                euros = dinero * 0.84f;
+                Console.WriteLine("Ingrese la cantidad de dollar que desea cambiar");
+                cantDollar = Convert.ToSingle(Console.ReadLine());
+                euros = cantDollar * 0.84f;
                 Console.WriteLine($"La cantidad de dinero en euros es: {euros}");
             }
 
